@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff8f2;
+  color: #292929;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 7%;
+  background: #171717;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar h1 {
+  font-size: 26px;
+}
+
+.navbar h1 span {
+  color: #ff6b1a;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar button,
+#checkoutButton {
+  border: none;
+  background: #ff6b1a;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero {
+  min-height: 390px;
+  padding: 70px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background: linear-gradient(120deg, #b92516, #ff6b1a);
+}
+
+.hero h2 {
+  max-width: 550px;
+  font-size: 44px;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.hero-button {
+  display: inline-block;
+  color: #ff6b1a;
+  background: white;
+  padding: 13px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-food {
+  font-size: 100px;
+  max-width: 350px;
+  line-height: 1.5;
+}
+
+.search-section {
+  padding: 28px 10%;
+  text-align: center;
+}
+
+.search-section input {
+  width: 90%;
+  max-width: 650px;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+}
+
+.section {
+  padding: 35px 8%;
+}
+
+.section h2 {
+  margin-bottom: 22px;
+  color: #b92516;
+}
+
+.restaurant-list,
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.restaurant-card,
+.food-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.restaurant-card:hover,
+.food-card:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant-image,
+.food-image {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0e5;
+  border-radius: 10px;
+  font-size: 70px;
+  margin-bottom: 14px;
+}
+
+.restaurant-card h3,
+.food-card h3 {
+  margin-bottom: 8px;
+}
+
+.restaurant-card p {
+  color: #777;
+}
+
+.food-card p {
+  color: #666;
+  margin: 8px 0;
+}
+
+.food-price {
+  color: #d9361e;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.add-button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #d9361e;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-panel {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 360px;
+  height: 100%;
+  background: white;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  padding: 22px;
+  transition: right 0.3s ease;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.cart-header button {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-footer {
+  position: absolute;
+  bottom: 25px;
+  left: 22px;
+  right: 22px;
+}
+
+.cart-footer h3 {
+  margin-bottom: 15px;
+}
+
+#checkoutButton {
+  width: 100%;
+}
+
+footer {
+  margin-top: 35px;
+  padding: 22px;
+  text-align: center;
+  background: #171717;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .navbar,
+  .navbar nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero-food {
+    font-size: 60px;
+  }
+
+  .cart-panel {
+    width: 100%;
+  }
+}

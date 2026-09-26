@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodExpress - Online Food Delivery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <h1>Food<span>Express</span></h1>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#restaurants">Restaurants</a>
+      <a href="#menu">Menu</a>
+      <button id="cartButton">Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <h2>Delicious food delivered to your door</h2>
+        <p>Explore restaurants, choose your favourite food, and order online.</p>
+        <a href="#restaurants" class="hero-button">Order Now</a>
+      </div>
+
+      <div class="hero-food">🍔 🍕 🍟</div>
+    </section>
+
+    <section class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for food or restaurants..."
+      />
+    </section>
+
+    <section id="restaurants" class="section">
+      <h2>Popular Restaurants</h2>
+
+      <div class="restaurant-list">
+        <div class="restaurant-card">
+          <div class="restaurant-image">🍔</div>
+          <h3>Burger House</h3>
+          <p>American • 25 min</p>
+        </div>
+
+        <div class="restaurant-card">
+          <div class="restaurant-image">🍕</div>
+          <h3>Pizza Palace</h3>
+          <p>Italian • 30 min</p>
+        </div>
+
+        <div class="restaurant-card">
+          <div class="restaurant-image">🍜</div>
+          <h3>Noodle Point</h3>
+          <p>Asian • 20 min</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <h2>Popular Food Items</h2>
+
+      <div id="foodContainer" class="food-grid"></div>
+    </section>
+  </main>
+
+  <div id="cartPanel" class="cart-panel">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart">×</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-footer">
+      <h3>Total: ₹<span id="cartTotal">0</span></h3>
+      <button id="checkoutButton">Checkout</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 FoodExpress | Online Food Delivery System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
